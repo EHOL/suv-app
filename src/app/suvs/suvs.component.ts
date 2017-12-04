@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Suv } from '../suv';
 
 @Component({
   selector: 'app-suvs',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./suvs.component.css']
 })
 export class SuvsComponent implements OnInit {
-	suv = "Jeep Grand Cherokee";
+	suv: Suv = {
+		id: 1,
+		name: 'Jeep Grand Cherokee'
+	}
 
   constructor() { }
 
