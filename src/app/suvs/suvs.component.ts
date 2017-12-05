@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Suv } from '../suv';
+import { SUVS } from '../mock-suvs';
 
 @Component({
   selector: 'app-suvs',
@@ -7,14 +8,18 @@ import { Suv } from '../suv';
   styleUrls: ['./suvs.component.css']
 })
 export class SuvsComponent implements OnInit {
-	suv: Suv = {
-		id: 1,
-		name: 'Jeep Grand Cherokee'
-	}
+	
+  suvs = SUVS;
+  
+  selectedSuv: Suv;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(suv: Suv): void {
+    this.selectedSuv = suv;
   }
 
 }
